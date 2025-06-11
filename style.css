@@ -13,15 +13,19 @@ header {
 }
 
 main {
-  padding: 1em;
+  padding: 2em;
 }
 
 .article {
   background: #fff;
-  padding: 1em;
+  padding: 1.5em;
   margin-bottom: 1em;
   border-radius: 8px;
   box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.article h2 {
+  color: #333;
 }
 
 .article a {
