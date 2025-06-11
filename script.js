@@ -3,7 +3,7 @@ const container = document.getElementById('news-container');
 
 async function loadRSS() {
   try {
-    const res = await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(feedUrl)}`);
+    const res = await fetch(`https://cors-anywhere.herokuapp.com/${feedUrl}`);
     const data = await res.json();
     const xmlText = data.contents;
 
