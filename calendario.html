@@ -3,100 +3,81 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Calendário de Corridas 2025</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <title>Calendário 2025 - AutoNews</title>
+  <link rel="stylesheet" href="calendario.css" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
+
   <header class="header">
     <a href="index.html" class="voltar"><i class="fas fa-arrow-left"></i> Voltar</a>
-    <h1>Calendário de Corridas 2025</h1>
+    <h1>Calendário 2025 - Corridas</h1>
   </header>
 
   <main class="container">
-    <section class="modulo">
-      <button class="toggle-btn">
-        <i class="fas fa-flag-checkered"></i> Fórmula 1
-      </button>
-      <div class="table-content">
-        <table>
-          <thead>
-            <tr>
-              <th>Data</th>
-              <th>Evento</th>
-              <th>Local</th>
-              <th>Categoria</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>16/06/2025</td>
-              <td>GP do Canadá (F1)</td>
-              <td>Montreal, Canadá</td>
-              <td>Fórmula 1</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
 
-    <section class="modulo">
-      <button class="toggle-btn">
-        <i class="fas fa-stopwatch"></i> Endurance
-      </button>
-      <div class="table-content">
-        <table>
-          <thead>
-            <tr>
-              <th>Data</th>
-              <th>Evento</th>
-              <th>Local</th>
-              <th>Categoria</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>22/06/2025</td>
-              <td>24h de Le Mans</td>
-              <td>Le Mans, França</td>
-              <td>Endurance</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
+    <!-- Botões de seleção -->
+    <div class="buttons">
+      <button class="toggle-btn"><i class="fas fa-flag-checkered"></i> Fórmula 1</button>
+      <button class="toggle-btn"><i class="fas fa-trophy"></i> Endurance</button>
+      <button class="toggle-btn"><i class="fas fa-road"></i> WRC Rally</button>
+      <button class="toggle-btn"><i class="fas fa-car-side"></i> NASCAR Cup</button>
+    </div>
 
-    <section class="modulo">
-      <button class="toggle-btn">
-        <i class="fas fa-drift"></i> Fórmula Drift
-      </button>
-      <div class="table-content">
-        <table>
-          <thead>
-            <tr>
-              <th>Data</th>
-              <th>Evento</th>
-              <th>Local</th>
-              <th>Categoria</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>05/07/2025</td>
-              <td>Drift Masters Round 3</td>
-              <td>Riga, Letônia</td>
-              <td>Fórmula Drift</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
+    <!-- Tabelas ocultas -->
+    <div class="table-content">
+      <!-- Fórmula 1 -->
+      <table>
+        <thead><tr><th>Data</th><th>Evento</th><th>Local</th></tr></thead>
+        <tbody>
+          <!-- dados da F1 confirmados -->
+          <tr><td>14‑16 Mar</td><td>GP da Austrália</td><td>Melbourne</td></tr>
+          <tr><td>21‑23 Mar</td><td>GP da China</td><td>Xangai</td></tr>
+          <!-- + demais etapas... -->
+          <tr><td>05‑07 Dez</td><td>GP de Abu Dhabi</td><td>Yas Marina</td></tr>
+        </tbody>
+      </table>
+
+      <!-- Endurance -->
+      <table>
+        <thead><tr><th>Data</th><th>Evento</th><th>Local</th></tr></thead>
+        <tbody>
+          <tr><td>14‑15 Jun</td><td>24h de Le Mans</td><td>Le Mans, FRA</td></tr>
+          <tr><td>25‑26 Jan</td><td>Rolex 24 Daytona</td><td>Daytona, EUA</td></tr>
+          <tr><td>15 Mar</td><td>12h de Sebring</td><td>Sebring, EUA</td></tr>
+          <!-- + IMSA... -->
+        </tbody>
+      </table>
+
+      <!-- Rally WRC -->
+      <table>
+        <thead><tr><th>Data</th><th>Evento</th><th>Local</th></tr></thead>
+        <tbody>
+          <tr><td>22‑26 Jan</td><td>Monte‑Carlo</td><td>Monaco</td></tr>
+          <tr><td>13‑16 Feb</td><td>Rally Sweden</td><td>Suécia</td></tr>
+          <tr><td>20‑23 Mar</td><td>Rally Kenya</td><td>Quênia</td></tr>
+          <!-- + mais etapas... -->
+          <tr><td>27‑30 Nov</td><td>Rally Saudi Arabia</td><td>Arábia Saudita</td></tr>
+        </tbody>
+      </table>
+
+      <!-- NASCAR Cup -->
+      <table>
+        <thead><tr><th>Data</th><th>Corrida</th><th>Pista</th></tr></thead>
+        <tbody>
+          <tr><td>Feb 16</td><td>Daytona 500</td><td>Daytona</td></tr>
+          <tr><td>Mar 2</td><td>Echopark GP</td><td>COTA</td></tr>
+          <tr><td>Jun 15</td><td>Mexico City</td><td>Autódromo Hermanos Rodríguez</td></tr>
+          <!-- + demais etapas... -->
+          <tr><td>Nov 2</td><td>Championship Race</td><td>Phoenix</td></tr>
+        </tbody>
+      </table>
+
+    </div>
   </main>
 
-  <footer class="footer">
-    <p>&copy; 2025 AutoNews. Todos os direitos reservados.</p>
-  </footer>
-
-  <script src="script.js"></script>
+  <footer class="footer">&copy; 2025 AutoNews</footer>
+  <script src="calendario.js"></script>
 </body>
 </html>

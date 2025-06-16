@@ -1,6 +1,8 @@
-document.querySelectorAll('.toggle-btn').forEach(button => {
-  button.addEventListener('click', () => {
-    const content = button.nextElementSibling;
-    content.classList.toggle('active');
+const tbls = document.querySelectorAll('.table-content table');
+document.querySelectorAll('.toggle-btn').forEach((btn, i) => {
+  btn.addEventListener('click', () => {
+    tbls.forEach((t,j) => {
+      t.classList.toggle('show', j === i);
+    });
   });
 });

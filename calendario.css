@@ -1,90 +1,18 @@
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  background: #f3f3f3;
-  color: #222;
-}
-
-.header {
-  background: #1c1e23;
-  color: white;
-  padding: 20px;
-  text-align: center;
-  position: relative;
-}
-
-.voltar {
-  position: absolute;
-  left: 20px;
-  top: 25px;
-  color: white;
-  text-decoration: none;
-}
-
-.container {
-  max-width: 900px;
-  margin: 40px auto;
-  padding: 20px;
-}
-
-.toggle-btn {
-  background-color: #1e293b;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  width: 100%;
-  text-align: left;
-  font-size: 1.1rem;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 10px;
-  transition: background 0.3s;
-}
-
-.toggle-btn:hover {
-  background-color: #334155;
-}
-
-.table-content {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.5s ease;
-}
-
-.table-content.active {
-  max-height: 1000px;
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-bottom: 20px;
-  background-color: white;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-}
-
-th, td {
-  padding: 12px 16px;
-  text-align: left;
-}
-
-thead {
-  background-color: #1c1e23;
-  color: white;
-}
-
-tbody tr:nth-child(even) {
-  background-color: #f9f9f9;
-}
-
-.footer {
-  background: #1c1e23;
-  color: white;
-  text-align: center;
-  padding: 15px;
-}
+body { font-family: Arial, sans-serif; margin:0; background:#f3f3f3; }
+.header { background:#1c1e23; color:#fff; padding:20px; text-align:center;
+         position:relative; }
+.voltar { position:absolute; left:20px; top:20px; color:#fff; text-decoration:none; }
+.container { max-width:900px; margin:40px auto; padding:0 20px; }
+.buttons { display:flex; flex-wrap:wrap; gap:10px; justify-content:center; }
+.toggle-btn { background:#1e293b; color:#fff; border:none; border-radius:6px;
+              padding:12px 16px; cursor:pointer; display:flex;
+              align-items:center; gap:8px; transition:background 0.3s; }
+.toggle-btn:hover { background:#334155; }
+.table-content table { width:100%; border-collapse:collapse;
+                       margin:20px 0; opacity:0; max-height:0;
+                       overflow:hidden; transition:all 0.5s ease; }
+.table-content table.show { opacity:1; max-height:1000px; }
+th, td { padding:12px; border-bottom:1px solid #ddd; }
+thead { background:#1c1e23; color:#fff; }
+tbody tr:nth-child(even) { background:#f9f9f9; }
+.footer { text-align:center; padding:10px; background:#1c1e23; color:#fff; }
