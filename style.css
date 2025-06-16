@@ -130,3 +130,25 @@ footer {
   display: block;
   margin-bottom: 0.5rem;
 }
+
+.calendar-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #2563eb; /* azul Tailwind */
+  color: white;
+  text-decoration: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  transition: background 0.3s ease;
+  font-weight: 500;
+}
+
+.calendar-btn:hover {
+  background-color: #1e40af; /* azul mais escuro */
+}
+
+.calendar-btn i {
+  font-size: 1rem;
+}
