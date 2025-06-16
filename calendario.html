@@ -1,55 +1,102 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Calendário de Corridas - Auto News</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calendário de Corridas 2025</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
   <header class="header">
-<div class="container my-5">
-  <h2 class="text-center mb-4">Calendário de Corridas 2025</h2>
-  <table class="table table-striped table-hover table-bordered">
-    <thead class="table-dark">
-      <tr>
-        <th>Data</th>
-        <th>Evento</th>
-        <th>Local</th>
-        <th>Categoria</th>
-        <th>Horário</th>
-        <th>Link Oficial</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>16/06/2025</td>
-        <td>GP do Canadá 🇨🇦</td>
-        <td>Montreal, Canadá</td>
-        <td>🏎️ Fórmula 1</td>
-        <td>14:00 (BRT)</td>
-        <td><a href="https://www.formula1.com" target="_blank">F1.com</a></td>
-      </tr>
-      <tr>
-        <td>22/06/2025</td>
-        <td>24h de Le Mans 🇫🇷</td>
-        <td>Le Mans, França</td>
-        <td>🏁 Endurance</td>
-        <td>10:00 (BRT)</td>
-        <td><a href="https://www.lemans.org" target="_blank">LeMans.org</a></td>
-      </tr>
-      <tr>
-        <td>05/07/2025</td>
-        <td>Drift Masters Round 3 🇱🇻</td>
-        <td>Riga, Letônia</td>
-        <td>💨 Fórmula Drift</td>
-        <td>15:00 (BRT)</td>
-        <td><a href="https://www.driftmasters.gp" target="_blank">DriftMasters</a></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+    <a href="index.html" class="voltar"><i class="fas fa-arrow-left"></i> Voltar</a>
+    <h1>Calendário de Corridas 2025</h1>
+  </header>
 
+  <main class="container">
+    <section class="modulo">
+      <button class="toggle-btn">
+        <i class="fas fa-flag-checkered"></i> Fórmula 1
+      </button>
+      <div class="table-content">
+        <table>
+          <thead>
+            <tr>
+              <th>Data</th>
+              <th>Evento</th>
+              <th>Local</th>
+              <th>Categoria</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>16/06/2025</td>
+              <td>GP do Canadá (F1)</td>
+              <td>Montreal, Canadá</td>
+              <td>Fórmula 1</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="modulo">
+      <button class="toggle-btn">
+        <i class="fas fa-stopwatch"></i> Endurance
+      </button>
+      <div class="table-content">
+        <table>
+          <thead>
+            <tr>
+              <th>Data</th>
+              <th>Evento</th>
+              <th>Local</th>
+              <th>Categoria</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>22/06/2025</td>
+              <td>24h de Le Mans</td>
+              <td>Le Mans, França</td>
+              <td>Endurance</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="modulo">
+      <button class="toggle-btn">
+        <i class="fas fa-drift"></i> Fórmula Drift
+      </button>
+      <div class="table-content">
+        <table>
+          <thead>
+            <tr>
+              <th>Data</th>
+              <th>Evento</th>
+              <th>Local</th>
+              <th>Categoria</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>05/07/2025</td>
+              <td>Drift Masters Round 3</td>
+              <td>Riga, Letônia</td>
+              <td>Fórmula Drift</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
   </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 AutoNews. Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
