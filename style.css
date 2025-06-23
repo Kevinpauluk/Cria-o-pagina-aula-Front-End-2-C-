@@ -5,12 +5,21 @@
   box-sizing: border-box;
 }
 
+/* Paleta de cores */
+:root {
+  --primary-color: #002244;     /* Azul escuro */
+  --secondary-color: #e10600;   /* Vermelho */
+  --accent-color: #c0c0c0;      /* Prata metálico */
+  --background-color: #f4f4f4;  /* Fundo geral */
+  --text-color: #1a1a1a;
+}
+
 /* Corpo da página */
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
-  background-color: #f4f4f4;
-  color: #333;
+  background-color: var(--background-color);
+  color: var(--text-color);
   padding: 20px;
 }
 
@@ -18,9 +27,10 @@ body {
 header {
   text-align: center;
   padding: 20px 0;
-  background-color: #20232a;
-  color: #fff;
+  background-color: var(--primary-color);
+  color: white;
   margin-bottom: 30px;
+  border-radius: 0 0 12px 12px;
 }
 
 /* Container principal */
@@ -31,7 +41,7 @@ header {
 
 /* Cada artigo */
 .article {
-  background-color: #fff;
+  background-color: white;
   padding: 20px;
   margin-bottom: 30px;
   border-radius: 8px;
@@ -41,7 +51,7 @@ header {
 /* Título das notícias */
 .article h2 {
   margin-bottom: 10px;
-  color: #1a1a1a;
+  color: var(--primary-color);
 }
 
 /* Descrição inicial */
@@ -61,16 +71,17 @@ header {
 .read-more {
   display: inline-block;
   margin-top: 15px;
-  background-color: #0077cc;
+  background-color: var(--secondary-color);
   color: white;
   text-decoration: none;
   padding: 10px 15px;
-  border-radius: 4px;
+  border-radius: 8px;
   transition: background 0.3s ease;
+  font-weight: bold;
 }
 
 .read-more:hover {
-  background-color: #005fa3;
+  background-color: #b00500;
 }
 
 /* Rodapé */
@@ -78,20 +89,22 @@ footer {
   text-align: center;
   margin-top: 50px;
   padding: 20px;
-  background-color: #20232a;
-  color: #fff;
+  background-color: var(--primary-color);
+  color: var(--accent-color);
+  border-radius: 12px 12px 0 0;
 }
 
-/*calendario*/
+/* Calendário */
 .calendar-container {
   max-width: 900px;
   margin: 2rem auto;
   padding: 1rem;
-  background-color: #f8f8f8;
+  background-color: white;
   border-radius: 12px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Tabela do calendário */
 .calendar-table {
   width: 100%;
   border-collapse: collapse;
@@ -105,48 +118,51 @@ footer {
 }
 
 .calendar-table th {
-  background-color: #222;
-  color: #fff;
+  background-color: var(--primary-color);
+  color: white;
   font-weight: bold;
 }
 
 .calendar-table tr:nth-child(even) {
-  background-color: #f0f0f0;
+  background-color: #f1f1f1;
 }
 
+/* Cabeçalho do calendário */
 .header {
   text-align: center;
   padding: 1rem;
-  background-color: #111;
+  background-color: var(--primary-color);
   color: white;
-  border-bottom: 4px solid red;
+  border-bottom: 4px solid var(--secondary-color);
   border-radius: 0 0 12px 12px;
 }
 
+/* Logo link pequeno */
 .logo {
-  color: #ccc;
+  color: var(--accent-color);
   text-decoration: none;
   font-size: 0.9rem;
   display: block;
   margin-bottom: 0.5rem;
 }
 
+/* Botão do calendário */
 .calendar-btn {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background-color: #2563eb; /* azul Tailwind */
+  background-color: var(--secondary-color);
   color: white;
   text-decoration: none;
   padding: 10px 16px;
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.15);
   transition: background 0.3s ease;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .calendar-btn:hover {
-  background-color: #1e40af; /* azul mais escuro */
+  background-color: #b00500;
 }
 
 .calendar-btn i {
