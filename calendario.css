@@ -1,18 +1,101 @@
-body { font-family: Arial, sans-serif; margin:0; background:#f3f3f3; }
-.header { background:#1c1e23; color:#fff; padding:20px; text-align:center;
-         position:relative; }
-.voltar { position:absolute; left:20px; top:20px; color:#fff; text-decoration:none; }
-.container { max-width:900px; margin:40px auto; padding:0 20px; }
-.buttons { display:flex; flex-wrap:wrap; gap:10px; justify-content:center; }
-.toggle-btn { background:#1e293b; color:#fff; border:none; border-radius:6px;
-              padding:12px 16px; cursor:pointer; display:flex;
-              align-items:center; gap:8px; transition:background 0.3s; }
-.toggle-btn:hover { background:#334155; }
-.table-content table { width:100%; border-collapse:collapse;
-                       margin:20px 0; opacity:0; max-height:0;
-                       overflow:hidden; transition:all 0.5s ease; }
-.table-content table.show { opacity:1; max-height:1000px; }
-th, td { padding:12px; border-bottom:1px solid #ddd; }
-thead { background:#1c1e23; color:#fff; }
-tbody tr:nth-child(even) { background:#f9f9f9; }
-.footer { text-align:center; padding:10px; background:#1c1e23; color:#fff; }
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f3f3f3;
+}
+
+/* Cabeçalho */
+.header {
+  background: #002244; /* Azul escuro */
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  border-bottom: 4px solid #e10600; /* Vermelho */
+}
+
+/* Botão de voltar */
+.voltar {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  color: #c0c0c0; /* Prata */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Container central */
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* Botões de categoria */
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+/* Botão individual */
+.toggle-btn {
+  background: #002244; /* Azul escuro */
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 12px 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background 0.3s ease;
+  font-weight: 600;
+}
+
+.toggle-btn:hover {
+  background: #e10600; /* Vermelho ao passar o mouse */
+}
+
+/* Tabela */
+.table-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+
+/* Mostrar tabela com animação */
+.table-content table.show {
+  opacity: 1;
+  max-height: 1000px;
+}
+
+/* Cabeçalho da tabela */
+th, td {
+  padding: 12px;
+  border-bottom: 1px solid #ccc;
+}
+
+/* Estilo do cabeçalho da tabela */
+thead {
+  background: #002244;
+  color: #fff;
+}
+
+/* Linhas pares */
+tbody tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+/* Rodapé */
+.footer {
+  text-align: center;
+  padding: 10px;
+  background: #002244;
+  color: #c0c0c0; /* Prata */
+}
