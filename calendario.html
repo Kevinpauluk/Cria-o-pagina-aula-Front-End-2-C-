@@ -7,6 +7,29 @@
   <link rel="stylesheet" href="calendario.css" />
   <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    .calendar-display {
+      position: relative;
+      min-height: 250px;
+      margin-top: 20px;
+    }
+
+    .calendar-display table {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.4s ease;
+    }
+
+    .calendar-display table.show {
+      opacity: 1;
+      pointer-events: all;
+      position: relative;
+    }
+  </style>
 </head>
 <body>
 
@@ -16,68 +39,64 @@
   </header>
 
   <main class="container">
-
     <!-- Botões de seleção -->
     <div class="buttons">
-      <button class="toggle-btn"><i class="fas fa-flag-checkered"></i> Fórmula 1</button>
-      <button class="toggle-btn"><i class="fas fa-trophy"></i> Endurance</button>
-      <button class="toggle-btn"><i class="fas fa-road"></i> WRC Rally</button>
-      <button class="toggle-btn"><i class="fas fa-car-side"></i> NASCAR Cup</button>
+      <button class="toggle-btn" onclick="showTable('f1')"><i class="fas fa-flag-checkered"></i> Fórmula 1</button>
+      <button class="toggle-btn" onclick="showTable('endurance')"><i class="fas fa-trophy"></i> Endurance</button>
+      <button class="toggle-btn" onclick="showTable('wrc')"><i class="fas fa-road"></i> WRC Rally</button>
+      <button class="toggle-btn" onclick="showTable('nascar')"><i class="fas fa-car-side"></i> NASCAR Cup</button>
     </div>
 
-    <!-- Tabelas ocultas -->
-    <div class="table-content">
-      <!-- Fórmula 1 -->
-      <table>
+    <!-- Tabelas sobrepostas -->
+    <div class="calendar-display">
+      <table id="f1" class="show">
         <thead><tr><th>Data</th><th>Evento</th><th>Local</th></tr></thead>
         <tbody>
-          <!-- dados da F1 confirmados -->
           <tr><td>14‑16 Mar</td><td>GP da Austrália</td><td>Melbourne</td></tr>
           <tr><td>21‑23 Mar</td><td>GP da China</td><td>Xangai</td></tr>
-          <!-- + demais etapas... -->
           <tr><td>05‑07 Dez</td><td>GP de Abu Dhabi</td><td>Yas Marina</td></tr>
         </tbody>
       </table>
 
-      <!-- Endurance -->
-      <table>
+      <table id="endurance">
         <thead><tr><th>Data</th><th>Evento</th><th>Local</th></tr></thead>
         <tbody>
           <tr><td>14‑15 Jun</td><td>24h de Le Mans</td><td>Le Mans, FRA</td></tr>
           <tr><td>25‑26 Jan</td><td>Rolex 24 Daytona</td><td>Daytona, EUA</td></tr>
           <tr><td>15 Mar</td><td>12h de Sebring</td><td>Sebring, EUA</td></tr>
-          <!-- + IMSA... -->
         </tbody>
       </table>
 
-      <!-- Rally WRC -->
-      <table>
+      <table id="wrc">
         <thead><tr><th>Data</th><th>Evento</th><th>Local</th></tr></thead>
         <tbody>
           <tr><td>22‑26 Jan</td><td>Monte‑Carlo</td><td>Monaco</td></tr>
           <tr><td>13‑16 Feb</td><td>Rally Sweden</td><td>Suécia</td></tr>
           <tr><td>20‑23 Mar</td><td>Rally Kenya</td><td>Quênia</td></tr>
-          <!-- + mais etapas... -->
           <tr><td>27‑30 Nov</td><td>Rally Saudi Arabia</td><td>Arábia Saudita</td></tr>
         </tbody>
       </table>
 
-      <!-- NASCAR Cup -->
-      <table>
+      <table id="nascar">
         <thead><tr><th>Data</th><th>Corrida</th><th>Pista</th></tr></thead>
         <tbody>
           <tr><td>Feb 16</td><td>Daytona 500</td><td>Daytona</td></tr>
           <tr><td>Mar 2</td><td>Echopark GP</td><td>COTA</td></tr>
           <tr><td>Jun 15</td><td>Mexico City</td><td>Autódromo Hermanos Rodríguez</td></tr>
-          <!-- + demais etapas... -->
           <tr><td>Nov 2</td><td>Championship Race</td><td>Phoenix</td></tr>
         </tbody>
       </table>
-
     </div>
   </main>
 
   <footer class="footer">&copy; 2025 AutoNews</footer>
-  <script src="calendario.js"></script>
+
+  <script>
+    function showTable(id) {
+      const tables = document.querySelectorAll(".calendar-display table");
+      tables.forEach(table => table.classList.remove("show"));
+      document.getElementById(id).classList.add("show");
+    }
+  </script>
 </body>
 </html>

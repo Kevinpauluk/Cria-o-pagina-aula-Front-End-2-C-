@@ -108,3 +108,27 @@ tbody tr:nth-child(even) {
   color: #c0c0c0; /* Prata */
   box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.15); /* sombra no topo do rodapé */
 }
+
+/* Exibir apenas uma tabela de cada vez no mesmo espaço fixo */
+.calendar-display {
+  position: relative;
+  min-height: 300px; /* Altura mínima para evitar salto na troca */
+  margin-top: 20px;
+}
+
+.calendar-display table {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(0.98);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.calendar-display table.show {
+  opacity: 1;
+  pointer-events: all;
+  transform: scale(1);
+}
